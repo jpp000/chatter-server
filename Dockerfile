@@ -7,7 +7,7 @@ COPY ./yarn.lock ./
 COPY ./tsconfig.json ./
 COPY ./nest-cli.json ./
 
-RUN yarn install --frozen-lockfile
+RUN yarn install --force
 
 COPY src src
 

@@ -1,17 +1,17 @@
 services:
-  # app:
-  #   depends_on:
-  #     - mongo
-  #   build:
-  #     dockerfile: ./Dockerfile
-  #     target: development
-  #   command: yarn start:dev
-  #   env_file:
-  #     - ./.env
-  #   ports:
-  #     - "3001:3001"
-  #   volumes:
-  #     - .:/usr/src/app
+  app:
+    depends_on:
+      - mongo
+    build:
+      dockerfile: ./Dockerfile
+      target: development
+    command: yarn start:dev
+    env_file:
+      - ./.env
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/usr/src/app
 
   mongo:
    image: mongo

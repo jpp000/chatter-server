@@ -15,6 +15,8 @@ import { AuthModule } from './auth/auth.module';
       validationSchema: Joi.object({
         MONGODB_URI: Joi.string().required(),
         PORT: Joi.number().required(),
+        JWT_EXPIRATION: Joi.number().required(),
+        JWT_SECRET: Joi.string().required(),
       }),
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
